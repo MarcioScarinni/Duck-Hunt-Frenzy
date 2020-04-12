@@ -9,8 +9,8 @@ class Mira(pygame.sprite.Sprite):
     def __init__(self, posx, posy):
         self.Imagemmira = pygame.image.load('imagens/mira.png')
         self.rect = self.Imagemmira.get_rect()
-        self.rect.top = posy
-        self.rect.left = posx
+        self.rect.top = posy - 22
+        self.rect.left = posx - 22
         self.tiroSom = pygame.mixer.Sound('sons/tiroduckh.ogg')
         self.atirando = False
 
