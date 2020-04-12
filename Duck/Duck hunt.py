@@ -86,7 +86,7 @@ while True:
     tela.blit(BACKGROUND, (0,0))
     tela.blit(barrapreta, (0,0))
     tela.blit(borda1,(0,51))
-    mira.mostrar(tela)
+
     if time >= 5.5:
         pato_group.update(time)
         pato_group.draw(tela)
@@ -135,7 +135,9 @@ while True:
 
         #mira.mostrar(tela)
         if time >= 5.5:
+            mira.mostrar(tela)
             toptexto.timer(f'Tempo: {reg:.0f}', tela)
+
         if Duck.Objetos.is_offscreen(pato_group.sprites()[0]):
             pato_group.remove(pato_group.sprites()[0])
             pato = Duck.Objetos.Pato(x, y)
